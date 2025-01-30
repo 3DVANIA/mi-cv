@@ -1,0 +1,196 @@
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Fondo y Diseño General */
+body {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e), url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Estilo de la cabecera */
+header {
+    padding: 40px 0;
+}
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    transition: transform 0.5s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+.perfil img:hover {
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+.perfil h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+.perfil p {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Secciones */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Lista de Habilidades */
+ul {
+    list-style: none;
+}
+ul li {
+    font-size: 1.2em;
+    margin: 20px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+ul li:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}
+
+/* Contacto */
+footer {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+}
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+/* Animación de Aparición Suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto Hover en Habilidades */
+ul li:hover {
+    transform: scale(1.1);
+    color: #ffeb3b;
+}
+
+/* Botones */
+button {
+    padding: 12px 20px;
+    margin: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    background: #ffeb3b;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+    background: #fbc02d;
+    border: 2px solid #673ab7;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón para Toggle de Música */
+#toggleMusica {
+    padding: 10px 15px;
+    font-size: 1em;
+    background: #673ab7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+#toggleMusica:hover {
+    background: #512da8;
+}
+
+/* Modo Oscuro */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+.dark-mode section {
+    background: rgba(255, 255, 255, 0.05);
+}
+.dark-mode footer {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón de Modo Oscuro */
+#modoOscuro {
+    padding: 10px 15px;
+    font-size: 1em;
+    background: #ff9800;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#modoOscuro:hover {
+    background: #e65100;
+}
+
+/* Redes Sociales */
+.redes {
+    margin-top: 10px;
+}
+.redes a {
+    text-decoration: none;
+    color: white;
+    background: #0077b6;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+.redes a:hover {
+    background: #023e8a;
+}
+
+/* Desplazamiento Suave */
+html {
+    scroll-behavior: smooth;
+}
+.experiencia .trabajo {
+    margin-bottom: 30px; /* Agrega más espacio entre cada experiencia */
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil de separación */
+}
+
+.experiencia h3 {
+    margin-bottom: 10px; /* Espacio entre el título y la descripción */
+    font-size: 1.5em;
+}
+
+.experiencia p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
