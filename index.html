@@ -3,67 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum de Freddy Eddy Andrade Gonzalez</title>
+    <title>Currículum | Freddy Eddy Andrade González</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <audio id="musicaFondo" loop>
-        <source src="fondo.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-    </audio>
-    <button id="toggleMusica">🔊 Pausar Música</button>
-    
-    <header>
-        <div class="perfil">
-            <img src="tu-foto.jpg" alt="Tu Foto">
-            <h1>Freddy Eddy Andrade Gonzalez</h1>
-            <p>Diseñador | Artista 3D | Programador</p>
+
+    <header class="hero">
+        <div class="container">
+            <img src="tu-foto.jpg" alt="Foto de Freddy Eddy Andrade González">
+            <h1>Freddy Eddy Andrade González</h1>
+            <h2>Diseñador | Programador | Artista 3D</h2>
         </div>
     </header>
 
-    <section class="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p>Soy un profesional con más de 35 años de experiencia en el mundo de la computación e informática. Mi carrera comenzó con el manejo y configuración de equipos, lo que me permitió desarrollar un conocimiento profundo sobre su funcionamiento. A lo largo de los años, he sido testigo de la evolución tecnológica y me he mantenido a la vanguardia, perfeccionando mis habilidades en programación, redes, y mantenimiento de sistemas.
-
-            Desde hace 23 años, mi pasión por el diseño me llevó a especializarme en el campo del diseño gráfico y 3D, fusionando mis conocimientos técnicos con mi creatividad. He trabajado en diversos proyectos de diseño, desde la creación de interfaces hasta la producción de modelos 3D y dioramas personalizados, siempre buscando un equilibrio entre estética y funcionalidad. Mi objetivo es seguir explorando las fronteras de la tecnología, creando soluciones innovadoras que no solo sean eficaces, sino que también cuenten con un alto valor visual.
-            
-            Mi enfoque siempre ha sido integrar arte y tecnología para ofrecer experiencias únicas y de calidad, y eso es lo que sigo haciendo hoy en día, con cada nuevo desafío que se presenta.</p>
-    </section>
-
-    <section class="habilidades">
-        <h2>Habilidades</h2>
+    <nav class="menu">
         <ul>
-            <li>🎨 Diseño Gráfico & 3D</li>
-            <li>💻 Desarrollo Web & Programación</li>
-            <li>🖋️ Edición y Publicación Digital</li>
-            <li>⚙️ Impresión 3D y Creación de Dioramas</li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section class="experiencia">
-        <h2>Experiencia</h2>
-        
-        <div class="trabajo">
-            <h3>🛠️ 3DVANIA</h3>
-            <p>Creación de modelos 3D, lámparas y dioramas personalizados.</p>
-        </div>
-    
-        <div class="trabajo">
-            <h3>🖌️ Diseñador & Publicista</h3>
-            <p>Experiencia en medios impresos, vinilos y publicaciones interactivas.</p>
+    <section id="sobre-mi" class="seccion">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <p>Soy un experto en informática con 35 años de experiencia en computación y 23 en diseño. Mi objetivo es fusionar tecnología y creatividad para desarrollar soluciones innovadoras, incluyendo Inteligencia Artificial.</p>
         </div>
     </section>
 
-    <button id="modoOscuro">🌙 Activar Modo Oscuro</button>
+    <section id="habilidades" class="seccion bg-light">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="grid">
+                <div class="skill">🎨 Diseño Gráfico & 3D</div>
+                <div class="skill">💻 Desarrollo Web & Programación</div>
+                <div class="skill">🖋️ Edición y Publicación Digital</div>
+                <div class="skill">⚙️ Impresión 3D y Creación de Dioramas</div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>📩 Contacto: <a href="mailto:andrade.freddy@gmail.com">andrade.freddy@gmail.com</a></p>
-        <button id="descargarPDF">Descargar CV en PDF</button>
-        <div class="redes">
-            <a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a>
-            <a href="https://www.artstation.com/tuusuario" target="_blank">🎨 ArtStation</a>
-            <a href="https://github.com/tuusuario" target="_blank">💻 GitHub</a>
+    <section id="experiencia" class="seccion">
+        <div class="container">
+            <h2>Experiencia</h2>
+            <div class="job">
+                <h3>3DVANIA</h3>
+                <p>Creación de modelos 3D, lámparas y dioramas personalizados.</p>
+            </div>
+            <div class="job">
+                <h3>Diseñador & Publicista</h3>
+                <p>Experiencia en medios impresos, vinilos y publicaciones interactivas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="seccion bg-light">
+        <div class="container">
+            <h2>Mi Gran Proyecto</h2>
+            <p>Mi mayor objetivo es desarrollar una **Inteligencia Artificial propia** que combine arte y tecnología para crear nuevas experiencias digitales.</p>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>📩 <a href="mailto:andrade.freddy@gmail.com">andrade.freddy@gmail.com</a></p>
+            <div class="redes">
+                <a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a>
+                <a href="https://www.artstation.com/tuusuario" target="_blank">🎨 ArtStation</a>
+                <a href="https://github.com/tuusuario" target="_blank">💻 GitHub</a>
+            </div>
         </div>
     </footer>
 
