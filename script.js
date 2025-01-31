@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Activar efectos de aparición en las secciones
-    let secciones = document.querySelectorAll(".seccion");
+    let secciones = document.querySelectorAll("section");
 
     function mostrarSeccion() {
         secciones.forEach(sec => {
@@ -15,4 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", mostrarSeccion);
     mostrarSeccion();
+
+    // Menú Responsive
+    let menu = document.querySelector(".menu");
+    let menuToggle = document.getElementById("menu-toggle");
+
+    menuToggle.addEventListener("click", function() {
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
 });

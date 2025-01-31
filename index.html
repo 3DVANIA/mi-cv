@@ -3,79 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum | Freddy Eddy Andrade González</title>
+    <title>Currículum de Freddy Andrade</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <img src="tu-foto.jpg" alt="Foto de Freddy Eddy Andrade González">
+    <!-- Menú de Navegación -->
+    <nav>
+        <div class="menu">
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <button id="menu-toggle">☰</button>
+    </nav>
+
+    <!-- Música de fondo -->
+    <audio id="musicaFondo" loop>
+        <source src="fondo.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+    <button id="toggleMusica">🔊 Pausar Música</button>
+
+    <header>
+        <div class="perfil">
+            <img src="tu-foto.jpg" alt="Foto de Freddy Andrade">
             <h1>Freddy Eddy Andrade González</h1>
-            <h2>Diseñador | Programador | Artista 3D</h2>
+            <p>Especialista en Computación | Diseño 3D | Inteligencia Artificial</p>
         </div>
     </header>
 
-    <nav class="menu">
+    <section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Con más de 35 años de experiencia en computación y 23 en diseño gráfico, me especializo en el desarrollo de soluciones tecnológicas innovadoras. Mi meta es fusionar el arte digital con la inteligencia artificial para crear proyectos vanguardistas.</p>
+    </section>
+
+    <section id="habilidades" class="habilidades">
+        <h2>Habilidades</h2>
         <ul>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li>🎨 Diseño Gráfico & 3D</li>
+            <li>💻 Desarrollo Web & Programación</li>
+            <li>🖋️ Edición y Publicación Digital</li>
+            <li>⚙️ Impresión 3D y Creación de Dioramas</li>
         </ul>
-    </nav>
+    </section>
 
-    <section id="sobre-mi" class="seccion">
-        <div class="container">
-            <h2>Sobre Mí</h2>
-            <p>Soy un experto en informática con 35 años de experiencia en computación y 23 en diseño. Mi objetivo es fusionar tecnología y creatividad para desarrollar soluciones innovadoras, incluyendo Inteligencia Artificial.</p>
+    <section id="experiencia" class="experiencia">
+        <h2>Experiencia</h2>
+        <div class="trabajo">
+            <h3>🚀 3DVANIA</h3>
+            <p>Fundador y diseñador principal. Creación de modelos 3D, lámparas y dioramas personalizados.</p>
+        </div>
+        <div class="trabajo">
+            <h3>📢 Diseñador & Publicista</h3>
+            <p>Especializado en medios impresos, vinilos y publicaciones interactivas.</p>
         </div>
     </section>
 
-    <section id="habilidades" class="seccion bg-light">
-        <div class="container">
-            <h2>Habilidades</h2>
-            <div class="grid">
-                <div class="skill">🎨 Diseño Gráfico & 3D</div>
-                <div class="skill">💻 Desarrollo Web & Programación</div>
-                <div class="skill">🖋️ Edición y Publicación Digital</div>
-                <div class="skill">⚙️ Impresión 3D y Creación de Dioramas</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia" class="seccion">
-        <div class="container">
-            <h2>Experiencia</h2>
-            <div class="job">
-                <h3>3DVANIA</h3>
-                <p>Creación de modelos 3D, lámparas y dioramas personalizados.</p>
-            </div>
-            <div class="job">
-                <h3>Diseñador & Publicista</h3>
-                <p>Experiencia en medios impresos, vinilos y publicaciones interactivas.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="proyectos" class="seccion bg-light">
-        <div class="container">
-            <h2>Mi Gran Proyecto</h2>
-            <p>Mi mayor objetivo es desarrollar una **Inteligencia Artificial propia** que combine arte y tecnología para crear nuevas experiencias digitales.</p>
-        </div>
-    </section>
+    <button id="modoOscuro">🌙 Activar Modo Oscuro</button>
 
     <footer id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>📩 <a href="mailto:andrade.freddy@gmail.com">andrade.freddy@gmail.com</a></p>
-            <div class="redes">
-                <a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a>
-                <a href="https://www.artstation.com/tuusuario" target="_blank">🎨 ArtStation</a>
-                <a href="https://github.com/tuusuario" target="_blank">💻 GitHub</a>
-            </div>
+        <p>📩 Contacto: <a href="mailto:andrade.freddy@gmail.com">andrade.freddy@gmail.com</a></p>
+        <button id="descargarPDF">📄 Descargar CV en PDF</button>
+        <div class="redes">
+            <a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a>
+            <a href="https://www.artstation.com/tuusuario" target="_blank">🎨 ArtStation</a>
+            <a href="https://github.com/tuusuario" target="_blank">💻 GitHub</a>
         </div>
     </footer>
 

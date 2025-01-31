@@ -1,76 +1,154 @@
+/* General */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
-
-.hero {
+    background: #f5f5f5;
     text-align: center;
-    background: #222;
-    color: white;
-    padding: 50px 0;
 }
 
-.hero img {
-    width: 150px;
-    border-radius: 50%;
+/* Menú de Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .menu {
-    background: #111;
-    padding: 10px 0;
-    text-align: center;
+    display: flex;
+    gap: 15px;
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.menu ul li a {
+.menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.seccion {
-    padding: 50px 0;
-    text-align: center;
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
 }
 
-.bg-light {
-    background: #fff;
+/* Header */
+header {
+    background: black;
+    color: white;
+    padding: 20px;
 }
 
-.grid {
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Secciones */
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #333;
+    color: white;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
+
+.redes {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.skill {
-    background: #222;
-    color: white;
-    padding: 10px 20px;
+.redes a {
+    text-decoration: none;
+    color: black;
+    background: white;
+    padding: 10px 15px;
+    margin: 5px;
     border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-footer {
-    background: #111;
+.redes a:hover {
+    background: black;
     color: white;
-    text-align: center;
-    padding: 20px 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: black;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 5px;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .perfil img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .habilidades ul {
+        flex-direction: column;
+    }
+
+    .redes {
+        flex-direction: column;
+    }
+
+    .redes a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
 }
