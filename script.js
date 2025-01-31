@@ -22,31 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     menuToggle.addEventListener("click", function() {
         menu.style.display = menu.style.display === "block" ? "none" : "block";
     });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    let secciones = document.querySelectorAll("section");
-
-    function mostrarSeccion() {
-        secciones.forEach(sec => {
-            let distancia = sec.getBoundingClientRect().top;
-            let alturaPantalla = window.innerHeight / 1.3;
-            if (distancia < alturaPantalla) {
-                sec.style.opacity = "1";
-                sec.style.transform = "translateY(0)";
-            }
-        });
-    }
-
-    window.addEventListener("scroll", mostrarSeccion);
-    mostrarSeccion();
-
-    // Menú Responsive
-    let menu = document.querySelector(".menu");
-    let menuToggle = document.getElementById("menu-toggle");
-
-    menuToggle.addEventListener("click", function() {
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
-    });
 
     // 🎭 Modo Oscuro
     let botonModo = document.getElementById("modoOscuro");
@@ -69,20 +44,22 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add("dark-mode");
         botonModo.textContent = "☀️ Activar Modo Claro";
     }
-});
-let botonArriba = document.getElementById("botonArriba");
 
-window.addEventListener("scroll", function() {
-    if (window.scrollY > 10) { // Cambié a 300px para hacerlo más visible cuando se baja
-        botonArriba.style.display = "block";
-    } else {
-        botonArriba.style.display = "none";
-    }
-});
+    // Botón "Volver arriba"
+    let botonArriba = document.getElementById("botonArriba");
 
-botonArriba.addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 10) {
+            botonArriba.style.display = "block";
+        } else {
+            botonArriba.style.display = "none";
+        }
+    });
+
+    botonArriba.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 });
