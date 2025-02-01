@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: #f5f5f5;
     text-align: center;
+    transition: background-color 1s ease, color 1s ease; /* Transición suave de 1 segundo para el fondo y color de texto */
 }
 
 /* Menú de Navegación */
@@ -12,11 +13,16 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: rgb(90, 90, 90);
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.nav a:hover {
+    background: black;
+    color: white;
 }
 
 .menu {
@@ -70,6 +76,7 @@ button {
     font-size: 1em;
     margin: 10px;
     transition: 0.3s;
+    transition: background-color 1s ease, color 1s ease; /* También podemos agregar transición al botón */
 }
 
 button:hover {
@@ -104,6 +111,7 @@ footer a {
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
+    transition: background-color 1s ease, color 1s ease; /* También podemos agregar transición al botón */
 }
 
 .redes a:hover {
@@ -136,16 +144,6 @@ footer a {
     .perfil img {
         width: 120px;
         height: 120px;
-    }
-
-    .habilidades ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .habilidades li {
-        text-align: left;
     }
 
     .redes {
@@ -192,6 +190,11 @@ footer a {
     color: white;
 }
 
+body.modo-oscuro {
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
 /* Botón subir */
 #botonArriba {
     position: fixed;
@@ -210,4 +213,57 @@ footer a {
 
 #botonArriba:hover {
     background: #444;
+}
+.sobre-mi {
+    max-width: 600px;  /* Ancho máximo del bloque */
+    margin: 20px auto; /* Centrado vertical y horizontal */
+    text-align: center; /* Texto alineado al centro */
+    background-color: #ffffff; /* Color de fondo oscuro (puedes cambiarlo) */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el bloque */
+    color: #000000; /* Color del texto */
+    
+}
+/* 🖼 Estilos para la ventana modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ✨ Efecto hover en los títulos y certificados */
+.hover-view {
+    cursor: pointer;
+    color: #aa1f1f;
+    transition: 0.3s;
+}
+
+.hover-view:hover {
+    text-decoration: underline;
+    color: #ff4444;
 }

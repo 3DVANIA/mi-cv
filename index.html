@@ -19,13 +19,6 @@
         <button id="menu-toggle">☰</button>
     </nav>
 
-    <!-- Música de fondo -->
-    <audio id="musicaFondo" loop>
-        <source src="fondo.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-    </audio>
-    <button id="toggleMusica">🔊 Pausar Música</button>
-
     <header>
         <div class="perfil">
             <img src="tu-foto.jpg" alt="Foto de Freddy Andrade">
@@ -34,10 +27,35 @@
         </div>
     </header>
 
-    <section id="sobre-mi" class="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p>Con más de 35 años de experiencia en computación y 23 en diseño gráfico, me especializo en el desarrollo de soluciones tecnológicas innovadoras. Mi meta es fusionar el arte digital con la inteligencia artificial para crear proyectos vanguardistas.</p>
-    </section>
+   <section id="sobre-mi" class="sobre-mi">
+    <h2>Sobre Mí</h2>
+    <p>Con más de 35 años de experiencia en computación y 23 en diseño gráfico, 
+        me especializo en el desarrollo de soluciones tecnológicas innovadoras. 
+        Mi meta es fusionar el arte digital con la inteligencia artificial para 
+        crear proyectos vanguardistas.</p>
+</section>
+
+<section id="formacion" class="formacion">
+    <h2>📚 Formación Académica</h2>
+    <div class="academico">
+        <p class="hover-view" data-img="img/titulo-diseno.jpg"><strong>Técnico en Diseño Gráfico Computarizado</strong> | [Nombre de la Institución] 🎓 (2002)</p>
+        <p class="hover-view" data-img="img/titulo-mecanico.jpg"><strong>Bachiller en Mantenimiento Mecánico</strong> | [Nombre de la Institución] 🎓 (1999)</p>
+    </div>
+
+    <h2>📜 Certificaciones y Cursos</h2>
+    <ul>
+        <li class="hover-view" data-img="img/certificado-ccna.jpg">✅ Certificación en Redes y Seguridad (CCNA) – Cisco</li>
+        <li class="hover-view" data-img="img/certificado-python.jpg">✅ Curso de Python para Automatización – Udemy</li>
+        <li class="hover-view" data-img="img/certificado-bd.jpg">✅ Curso de Administrador de Bases de Datos – Coursera</li>
+    </ul>
+</section>
+
+<!-- 🖼 Modal para mostrar imágenes -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
 
     <section id="habilidades" class="habilidades">
         <h2>Habilidades</h2>
@@ -67,15 +85,16 @@
         <p>📩 Contacto: <a href="mailto:andrade.freddy@gmail.com">andrade.freddy@gmail.com</a></p>
         <button id="descargarPDF">📄 Descargar CV en PDF</button>
         <div class="redes">
-            <a href="https://www.instagram.com/tuusuario" target="_blank">📸 Instagram</a>
+            <a href="https://www.instagram.com/_3dvania" target="_blank">📸 Instagram</a>
             <a href="https://www.artstation.com/tuusuario" target="_blank">🎨 ArtStation</a>
-            <a href="https://github.com/tuusuario" target="_blank">💻 GitHub</a>
+            <a href="https://www.facebook.com/3dvania" target="_blank">📘 Facebook</a>
         </div>
     </footer>
 
     <button id="botonArriba" title="Volver arriba">⬆️</button>
 
     <script src="script.js"></script>
+    
 
 </body>
 </html>

@@ -63,3 +63,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+document.getElementById("descargarPDF").addEventListener("click", function() {
+    window.print();
+});
+// Seleccionamos los elementos necesarios
+const hoverItems = document.querySelectorAll(".hover-view");
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeModal = document.querySelector(".close");
+
+// Función para abrir el modal al hacer clic
+hoverItems.forEach(item => {
+    item.addEventListener("click", function() {
+        const imgSrc = this.getAttribute("data-img");
+        modalImg.src = imgSrc;
+        modal.style.display = "flex";
+    });
+});
+
+// Cerrar el modal al hacer clic en la "X" o fuera de la imagen
+closeModal.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
