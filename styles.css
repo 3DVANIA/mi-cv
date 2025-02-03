@@ -20,11 +20,6 @@ nav {
     z-index: 1000;
 }
 
-.nav a:hover {
-    background: black;
-    color: white;
-}
-
 .menu {
     display: flex;
     gap: 15px;
@@ -266,4 +261,36 @@ body.modo-oscuro {
 .hover-view:hover {
     text-decoration: underline;
     color: #ff4444;
+}
+/* Estilo base para los títulos */
+.titulo-pdf {
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para tamaño y color */
+}
+
+/* Efecto de hover: cambio de tamaño y color */
+.titulo-pdf:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    color: #ff5722; /* Cambia el color del texto (puedes poner el color que prefieras) */
+}
+/* Efecto de entrada desde los lados */
+.hidden {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Efecto de difuminado */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
 }

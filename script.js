@@ -91,3 +91,42 @@ modal.addEventListener("click", function(event) {
         modal.style.display = "none";
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".hover-view");
+
+    elements.forEach((element) => {
+        element.addEventListener("click", function () {
+            // Crear la imagen emergente si aún no existe
+            let imgContainer = document.getElementById("imagePopup");
+            if (!imgContainer) {
+                imgContainer = document.createElement("div");
+                imgContainer.id = "imagePopup";
+                imgContainer.classList.add("fade-in");
+                document.body.appendChild(imgContainer);
+            }
+
+            // Insertar la imagen seleccionada
+            imgContainer.innerHTML = `<img src="${element.dataset.img}" alt="Certificado">`;
+            imgContainer.classList.add("visible");
+
+            // Cerrar imagen al hacer clic fuera de ella
+            imgContainer.addEventListener("click", function () {
+                imgContainer.classList.remove("visible");
+            });
+        });
+
+        // Animación al hacer scroll
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(element);
+    });
+});
