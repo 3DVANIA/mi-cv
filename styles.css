@@ -253,6 +253,7 @@ body.modo-oscuro {
     object-fit: contain;
 }
 
+
 /* El "X" de cierre */
 .close-btn {
     position: absolute;
@@ -272,7 +273,6 @@ body.modo-oscuro {
         max-height: auto;
     }
 }
-
 
 /* Hover en imagen */
 .hover-view img {
@@ -345,4 +345,27 @@ body.modo-oscuro {
 
 .fade-in.visible {
     opacity: 1;
+}
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #b9001f;
+}
+.parrafos
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: lighter;
+    font-style: normal;
+    font-family: arial narrow;
 }

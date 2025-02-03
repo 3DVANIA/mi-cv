@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Manejo de secciones y animación de scroll
+    // Código para manejar secciones y animación de scroll
     let secciones = document.querySelectorAll("section");
 
     function mostrarSeccion() {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", mostrarSeccion);
     mostrarSeccion();
 
-    // Menú Responsive
+    // Código del menú responsive
     let menu = document.querySelector(".menu");
     let menuToggle = document.getElementById("menu-toggle");
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
     });
 
-    // Modo Oscuro
+    // Código del modo oscuro
     let botonModo = document.getElementById("modoOscuro");
 
     botonModo.addEventListener("click", function() {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.print();
     });
 
-    // Modal para imágenes
+    // Modal para imágenes (solo una vez)
     const hoverItems = document.querySelectorAll(".hover-view");
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
@@ -93,57 +93,52 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Animación de imagen emergente al hacer clic
-    const elements = document.querySelectorAll(".hover-view");
+   // Eliminar contenedor de imágenes emergentes extra debajo de contacto
+   const elements = document.querySelectorAll(".hover-view");
+
+   // Verifica si el contenedor emergente ya existe
+   let imgContainer = document.getElementById("imagePopup");
+   
+   // Si no existe, lo creamos
+   if (!imgContainer) {
+       imgContainer = document.createElement("div");
+       imgContainer.id = "imagePopup";
+       imgContainer.classList.add("fade-in");
+       document.body.appendChild(imgContainer);
+   } else {
+       imgContainer.style.display = 'none';  // Aseguramos que el contenedor esté oculto al principio
+   }
+   
+   elements.forEach((element) => {
+       element.addEventListener("click", function () {
+           // Insertar la imagen seleccionada en el contenedor
+           imgContainer.innerHTML = `<img src="${element.dataset.img}" alt="Imagen emergente">`;
+           imgContainer.style.display = 'block'; // Mostrar el contenedor
+   
+           // Agregar la clase para hacer visible la imagen
+           imgContainer.classList.add("visible");
+   
+           // Cerrar la imagen al hacer clic fuera de ella
+           imgContainer.addEventListener("click", function () {
+               imgContainer.style.display = 'none'; // Ocultar el contenedor
+           });
+       });
+   });
+   
+
+    // Animación de las secciones
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
 
     elements.forEach((element) => {
-        element.addEventListener("click", function () {
-            // Crear la imagen emergente si aún no existe
-            let imgContainer = document.getElementById("imagePopup");
-            if (!imgContainer) {
-                imgContainer = document.createElement("div");
-                imgContainer.id = "imagePopup";
-                imgContainer.classList.add("fade-in");
-                document.body.appendChild(imgContainer);
-            }
-
-            // Insertar la imagen seleccionada
-            imgContainer.innerHTML = `<img src="${element.dataset.img}" alt="Certificado">`;
-            imgContainer.classList.add("visible");
-
-            // Cerrar imagen al hacer clic fuera de ella
-            imgContainer.addEventListener("click", function () {
-                imgContainer.classList.remove("visible");
-            });
-        });
-
-        // Animación al hacer scroll
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            },
-            { threshold: 0.2 }
-        );
-
         observer.observe(element);
     });
-});
-document.querySelectorAll('.hover-view').forEach(item => {
-    item.addEventListener('click', function() {
-        const imgSrc = item.getAttribute('data-img');
-        const modalImg = document.getElementById('modal-img');
-        modalImg.src = imgSrc;
-
-        const modal = document.getElementById('modal');
-        modal.style.display = "block";
-    });
-});
-
-document.querySelector('.close').addEventListener('click', function() {
-    const modal = document.getElementById('modal');
-    modal.style.display = "none";
 });
