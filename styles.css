@@ -220,29 +220,32 @@ body.modo-oscuro {
     color: #000000; /* Color del texto */
     
 }
-/* 🖼 Estilos para la ventana modal */
-.modal {
-    display: none; 
+/* Estilo para el contenedor del modal */
+.modal-img {
+    display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
     justify-content: center;
+    z-index: 1000;
 }
 
+/* Estilo para la imagen dentro del modal */
 .modal-content {
-    max-width: 90%;
-    max-height: 80%;
+    max-width: 90%;  /* Ajuste al 90% del ancho */
+    max-height: 80%; /* Ajuste a un 80% de la altura de la pantalla */
     margin: auto;
-    border-radius: 5px solid white;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    object-fit: contain; /* Para mantener la proporción de la imagen */
 }
 
-.close {
+/* El "X" de cierre */
+.close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -252,20 +255,22 @@ body.modo-oscuro {
     cursor: pointer;
     z-index: 1001;
 }
-/* Hover y responsividad en dispositivos móviles */
+
+/* Responsividad en pantallas pequeñas */
 @media (max-width: 768px) {
     .modal-content {
         max-width: 95%;
-        max-height: 70%;
+        max-height: 75%;
     }
 }
 
 @media (max-width: 480px) {
     .modal-content {
         max-width: 100%;
-        max-height: 60%;
+        max-height: 65%;
     }
 }
+
 .hover-view img {
     width: 100%;
     height: auto;
