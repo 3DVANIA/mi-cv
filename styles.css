@@ -139,7 +139,7 @@ footer a {
     }
 
     #menu-toggle {
-        display: block;
+        display: flex;
     }
 
     .perfil img {
