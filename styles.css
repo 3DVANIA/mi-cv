@@ -266,6 +266,26 @@ body.modo-oscuro {
         max-height: 60%;
     }
 }
+.hover-view img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Responsividad para párrafos con imagen */
+@media (max-width: 768px) {
+    .hover-view {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hover-view {
+        font-size: 12px;
+    }
+}
+
 /* ✨ Efecto hover en los títulos y certificados */
 .hover-view {
     cursor: pointer;
