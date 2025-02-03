@@ -286,7 +286,7 @@ body.modo-oscuro {
 }
 
 .modal-content {
-    width: 100%;
+    width: auto;
     height: auto;
     max-width: auto;
     max-height: auto;
