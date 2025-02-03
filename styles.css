@@ -5,7 +5,7 @@ body {
     padding: 0;
     background: #f5f5f5;
     text-align: center;
-    transition: background-color 1s ease, color 1s ease; /* Transición suave de 1 segundo para el fondo y color de texto */
+    transition: background-color 1s ease, color 1s ease, transform 0.3s ease; /* Transición suave de fondo, color y transform */
 }
 
 /* Menú de Navegación */
@@ -29,6 +29,7 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 1s ease, color 1s ease, transform 0.3s ease;
 }
 
 #menu-toggle {
@@ -70,8 +71,7 @@ button {
     cursor: pointer;
     font-size: 1em;
     margin: 10px;
-    transition: 0.3s;
-    transition: background-color 1s ease, color 1s ease; /* También podemos agregar transición al botón */
+    transition: background-color 1s ease, color 1s ease, transform 0.3s ease;
 }
 
 button:hover {
@@ -105,8 +105,7 @@ footer a {
     margin: 5px;
     border-radius: 5px;
     font-weight: bold;
-    transition: 0.3s;
-    transition: background-color 1s ease, color 1s ease; /* También podemos agregar transición al botón */
+    transition: background-color 1s ease, color 1s ease, transform 0.3s ease;
 }
 
 .redes a:hover {
@@ -183,8 +182,10 @@ footer a {
 .dark-mode .redes a:hover {
     background: black;
     color: white;
+
 }
 
+/* Body para modo oscuro */
 body.modo-oscuro {
     background-color: #121212; /* Fondo oscuro */
     color: #ffffff; /* Texto blanco */
@@ -209,17 +210,19 @@ body.modo-oscuro {
 #botonArriba:hover {
     background: #444;
 }
+
+/* Estilos adicionales */
 .sobre-mi {
-    max-width: 600px;  /* Ancho máximo del bloque */
-    margin: 20px auto; /* Centrado vertical y horizontal */
-    text-align: center; /* Texto alineado al centro */
-    background-color: #ffffff; /* Color de fondo oscuro (puedes cambiarlo) */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el bloque */
-    color: #000000; /* Color del texto */
-    
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: #000000;
 }
+
 /* Estilo para el contenedor del modal */
 .modal-img {
     display: none;
@@ -236,12 +239,12 @@ body.modo-oscuro {
 
 /* Estilo para la imagen dentro del modal */
 .modal-content {
-    max-width: 90%;  /* Ajuste al 90% del ancho */
-    max-height: 80%; /* Ajuste a un 80% de la altura de la pantalla */
+    max-width: 90%;
+    max-height: 80%;
     margin: auto;
     border: 5px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    object-fit: contain; /* Para mantener la proporción de la imagen */
+    object-fit: contain;
 }
 
 /* El "X" de cierre */
@@ -271,6 +274,7 @@ body.modo-oscuro {
     }
 }
 
+/* Hover en imagen */
 .hover-view img {
     width: 100%;
     height: auto;
@@ -291,7 +295,7 @@ body.modo-oscuro {
     }
 }
 
-/* ✨ Efecto hover en los títulos y certificados */
+/* Efecto hover en los títulos y certificados */
 .hover-view {
     cursor: pointer;
     color: #aa1f1f;
@@ -302,17 +306,19 @@ body.modo-oscuro {
     text-decoration: underline;
     color: #ff4444;
 }
+
 /* Estilo base para los títulos */
 .titulo-pdf {
-    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para tamaño y color */
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Efecto de hover: cambio de tamaño y color */
 .titulo-pdf:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-    color: #ff5722; /* Cambia el color del texto (puedes poner el color que prefieras) */
+    transform: scale(1.1);
+    color: #ff5722;
 }
+
 /* Efecto de entrada desde los lados */
 .hidden {
     opacity: 0;
@@ -334,3 +340,5 @@ body.modo-oscuro {
 .fade-in.visible {
     opacity: 1;
 }
+
+

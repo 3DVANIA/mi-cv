@@ -130,3 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
+/* Código JS para el menú móvil */
+document.getElementById("menu-toggle").addEventListener("click", function() {
+    const menu = document.querySelector(".menu");
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+});
