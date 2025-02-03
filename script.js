@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    // Manejo de secciones y animación de scroll
     let secciones = document.querySelectorAll("section");
 
     function mostrarSeccion() {
@@ -20,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let menuToggle = document.getElementById("menu-toggle");
 
     menuToggle.addEventListener("click", function() {
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
+        menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
     });
 
-    // 🎭 Modo Oscuro
+    // Modo Oscuro
     let botonModo = document.getElementById("modoOscuro");
 
     botonModo.addEventListener("click", function() {
@@ -62,36 +63,37 @@ document.addEventListener("DOMContentLoaded", function() {
             behavior: "smooth"
         });
     });
-});
-document.getElementById("descargarPDF").addEventListener("click", function() {
-    window.print();
-});
-// Seleccionamos los elementos necesarios
-const hoverItems = document.querySelectorAll(".hover-view");
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const closeModal = document.querySelector(".close");
 
-// Función para abrir el modal al hacer clic
-hoverItems.forEach(item => {
-    item.addEventListener("click", function() {
-        const imgSrc = this.getAttribute("data-img");
-        modalImg.src = imgSrc;
-        modal.style.display = "flex";
+    // Descargar PDF
+    document.getElementById("descargarPDF").addEventListener("click", function() {
+        window.print();
     });
-});
 
-// Cerrar el modal al hacer clic en la "X" o fuera de la imagen
-closeModal.addEventListener("click", function() {
-    modal.style.display = "none";
-});
+    // Modal para imágenes
+    const hoverItems = document.querySelectorAll(".hover-view");
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeModal = document.querySelector(".close");
 
-modal.addEventListener("click", function(event) {
-    if (event.target === modal) {
+    hoverItems.forEach(item => {
+        item.addEventListener("click", function() {
+            const imgSrc = this.getAttribute("data-img");
+            modalImg.src = imgSrc;
+            modal.style.display = "flex";
+        });
+    });
+
+    closeModal.addEventListener("click", function() {
         modal.style.display = "none";
-    }
-});
-document.addEventListener("DOMContentLoaded", function () {
+    });
+
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Animación de imagen emergente al hacer clic
     const elements = document.querySelectorAll(".hover-view");
 
     elements.forEach((element) => {
@@ -130,8 +132,18 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
-/* Código JS para el menú móvil */
-document.getElementById("menu-toggle").addEventListener("click", function() {
-    const menu = document.querySelector(".menu");
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+document.querySelectorAll('.hover-view').forEach(item => {
+    item.addEventListener('click', function() {
+        const imgSrc = item.getAttribute('data-img');
+        const modalImg = document.getElementById('modal-img');
+        modalImg.src = imgSrc;
+
+        const modal = document.getElementById('modal');
+        modal.style.display = "block";
+    });
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+    const modal = document.getElementById('modal');
+    modal.style.display = "none";
 });
